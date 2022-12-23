@@ -1,0 +1,11 @@
+查询
+wgrib2 -s E:\wgrib2\debug\data.grib | find ":PTYPE:"
+wgrib2 -match ":PTYPE:"  E:\wgrib2\debug\data.grib
+全部提取
+wgrib2 E:\wgrib2\debug\data.grib –text E:\wgrib2\debug\data.txt
+降水相态
+wgrib2 -match ":PTYPE:"  E:\wgrib2\debug\data.grib  –text E:\wgrib2\debug\PTYPE.txt
+wgrib2 -s E:\wgrib2\debug\data.grib | egrep“:PTYPE:”| wgrib2 –i E:\wgrib2\debug\data.grib –text E:\wgrib2\debug\PTYPE.txt
+wgrib2 -d 1 E:\wgrib2\debug\data.grib  –text E:\wgrib2\debug\PTYPE.txt
+
+示例下载  https://download.csdn.net/download/lxl743p/9874596  
